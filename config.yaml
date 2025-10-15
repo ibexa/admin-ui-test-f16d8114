@@ -1,0 +1,3 @@
+config:
+  global:
+    slack_api_url: "https://hooks.slack.com/services/X1Y2Z3A4C5/ABRWALG/45jh23hk4j5vhj34khjkj"
